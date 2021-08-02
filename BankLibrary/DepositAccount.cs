@@ -36,6 +36,5 @@ namespace BankLibrary
             if (_days % 30 == 0)
                 base.Calculate();
         }
-
     }
 }
