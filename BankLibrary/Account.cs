@@ -2,9 +2,9 @@
 {
     public abstract class Account : IAccount
     {
-        protected internal event AccountStateHandler Withdrawed;
-        protected internal event AccountStateHandler Added;
         protected internal event AccountStateHandler Opened;
+        protected internal event AccountStateHandler Added;
+        protected internal event AccountStateHandler Withdrawed;
         protected internal event AccountStateHandler Closed;
         protected internal event AccountStateHandler Calculated;
 

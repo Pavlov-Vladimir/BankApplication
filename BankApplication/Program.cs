@@ -5,9 +5,9 @@ namespace BankApplication
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Bank<Account> bank = new Bank<Account>("BigBank");
+            Bank<Account> bank = new("BigBank");
             bool alive = true;
             while (alive)
             {
@@ -55,12 +55,8 @@ namespace BankApplication
         {
             Console.Write("Choose account type: 1. Demand \t 2. Deposit \n-> ");
             int type = Convert.ToInt32(Console.ReadLine());
-            
-            AccountType accountType;
-            if (type == 2)
-                accountType = AccountType.Deposit;
-            else
-                accountType = AccountType.Ordinary;
+
+            AccountType accountType = (type == 2) ? AccountType.Deposit : AccountType.Ordinary;
 
             Console.Write("Enter the amount to create the account: \n-> ");
             decimal sum = Convert.ToDecimal(Console.ReadLine());
